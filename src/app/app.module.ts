@@ -7,13 +7,15 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MemoryDetailComponent } from './components/memories/memory-detail/memory-detail.component';
 import { FormsModule } from '@angular/forms';
+import { MemoryMasterComponent } from './components/memories/memory-master/memory-master.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    MemoryDetailComponent
+    MemoryDetailComponent,
+    MemoryMasterComponent
   ],
   imports: [
     BrowserModule,
