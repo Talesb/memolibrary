@@ -1,6 +1,6 @@
 # Memolibrary
 
-Project created to train skills with angular [Angular](https://github.com/angular/angular-cli) version 14.0.0.
+Project created to train skills with [Angular](https://github.com/angular/angular-cli) version 14.0.0.
 The project consists of a reminders/memories dashboard.
 
 ## Development server
