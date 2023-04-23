@@ -1,4 +1,4 @@
-<div class="pensamento {{memory.model}} ff-roboto-mono pensamento-p">
+<div class="pensamento {{memory.model}} ff-roboto-mono" [ngClass]="memoryWidth()">
     <img src="/assets/images/{{memory.model}}.png" alt="Double Quotes">
     <p class="conteudo">
         {{memory.content}}
