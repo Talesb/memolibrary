@@ -10,6 +10,10 @@ const routes: Routes = [
     component: MemoryDetailComponent
   },
   {
+    path: 'memory-detail/:id',
+    component: MemoryDetailComponent
+  },
+  {
     path: 'memory-master',
     component: MemoryMasterComponent
   },

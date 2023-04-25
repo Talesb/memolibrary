@@ -33,7 +33,10 @@ export class MemoryService {
     return this.httpClient.delete<Memory>(URL);
   }
 
-
+  updateMemory(memory: Memory): Observable<Memory> {
+    const URL = `${this.API_URL}/${memory.id}`;
+    return this.httpClient.put<Memory>(URL, memory);
+  }
 
 
 
