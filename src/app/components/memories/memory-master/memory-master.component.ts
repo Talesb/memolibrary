@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Memory } from '../memory';
+import { MemoryService } from '../memory.service';
 
 @Component({
   selector: 'app-memory-master',
@@ -8,28 +10,16 @@ import { Component, OnInit } from '@angular/core';
 export class MemoryMasterComponent implements OnInit {
 
 
-  memoryList = [
-    {
-      content: 'Test',
-      author: 'Talesb',
-      model: 'modelo3'
-    },
-    {
-      content: 'Test 2',
-      author: 'Talesb 2',
-      model: 'modelo2'
-    },
-    {
-      content: 'orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum sagittis dolor, et convallis metus. Donec id est in eros viverra tincidunt vitae rhoncus mauris. Donec lacinia nunc non sapien sodales cursus. Ut laoreet ex nec turpis egestas posuere. Cras non dolor fringilla, fringilla risus eget, finibus elit. Nullam tincidunt nunc et libero vulputate rutrum. ',
-      author: 'Talesb 3',
-      model: 'modelo1'
-    }
+  memoryList: Memory[] = [];
 
-  ];
-
-  constructor() { }
+  constructor(private memoryService: MemoryService) { }
 
   ngOnInit(): void {
+    
+    this.memoryService.getAll().subscribe((memos) => {
+      this.memoryList = memos;
+    });
+
   }
 
 }

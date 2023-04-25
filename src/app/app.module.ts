@@ -9,6 +9,8 @@ import { MemoryDetailComponent } from './components/memories/memory-detail/memor
 import { FormsModule } from '@angular/forms';
 import { MemoryMasterComponent } from './components/memories/memory-master/memory-master.component';
 import { MemoryComponent } from './components/memories/memory/memory.component';
+import { HttpClientModule } from '@angular/common/http';
+import { RemoveMemoryModalComponent } from './components/memories/remove-memory-modal/remove-memory-modal.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +19,14 @@ import { MemoryComponent } from './components/memories/memory/memory.component';
     FooterComponent,
     MemoryDetailComponent,
     MemoryMasterComponent,
-    MemoryComponent
+    MemoryComponent,
+    RemoveMemoryModalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

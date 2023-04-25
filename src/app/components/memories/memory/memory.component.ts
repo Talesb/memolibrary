@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Memory } from '../memory';
 
 @Component({
   selector: 'app-memory',
@@ -8,7 +9,12 @@ import { Component, Input, OnInit } from '@angular/core';
 export class MemoryComponent implements OnInit {
 
   @Input()
-  memory: any;
+  memory: Memory = {
+    id: 0,
+    content: '',
+    author: '',
+    model: 'modelo1'
+  };
 
 
 

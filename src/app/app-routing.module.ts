@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MemoryDetailComponent } from './components/memories/memory-detail/memory-detail.component';
 import { MemoryMasterComponent } from './components/memories/memory-master/memory-master.component';
+import { RemoveMemoryModalComponent } from './components/memories/remove-memory-modal/remove-memory-modal.component';
 
 const routes: Routes = [
   {
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path: 'memory-master',
     component: MemoryMasterComponent
+  },
+  {
+    path: 'memory-detail/delete/:id',
+    component: RemoveMemoryModalComponent
   },
   {
     path: '',

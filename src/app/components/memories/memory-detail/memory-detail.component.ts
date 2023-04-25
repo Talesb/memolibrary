@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Memory } from '../memory';
+import { MemoryService } from '../memory.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-memory-detail',
@@ -7,26 +10,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MemoryDetailComponent implements OnInit {
 
-  memory = {
-    id: '1',
-    content: 'Learning Angular',
-    author: 'Talesb',
+  memory: Memory = {
+    content: '',
+    author: '',
     model: ''
   };
 
 
-  constructor() { }
+  constructor(private memoryService: MemoryService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
 
   createMemory() {
-    alert('Novo pensamento criado');
+    this.memoryService.createMemory(this.memory).subscribe(()=>{
+      this.router.navigate(['/']);
+    });
   }
 
   cancel() {
-    alert('Novo pensamento cancelado');
+    this.router.navigate(['/']);
   }
 
 

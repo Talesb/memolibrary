@@ -5,17 +5,19 @@
     <form>
 
         <label for="pensamento">Memory/Thought:</label>
-        <input type="textarea" class="input" id="pensamento" name="pensamento" placeholder="Type your memory" [(ngModel)]=memory.content>
+        <input type="textarea" class="input" id="pensamento" name="pensamento" placeholder="Type your memory"
+            [(ngModel)]=memory.content>
 
         <label for="autoria">Author</label>
-        <input type="textarea" class="input" id="autoria" name="autoria" placeholder="Type the author name" [(ngModel)]=memory.author>
+        <input type="textarea" class="input" id="autoria" name="autoria" placeholder="Type the author name"
+            [(ngModel)]=memory.author>
 
         <label for="modelo">Select the card model:</label>
         <div class="container-radio">
 
             <div class="radio-modelo">
                 <label for="modelo1">
-                    <input type="radio" id="modelo1" name="modelo-card"  value="modelo1" [(ngModel)]="memory.model">
+                    <input type="radio" id="modelo1" name="modelo-card" value="modelo1" [(ngModel)]="memory.model">
                     <div class="custom-radio">
                         <span></span>
                     </div>
@@ -65,8 +67,8 @@
         </div>
 
         <div class="acoes">
-            <button (click)="createMemory()"  class="botao">Save</button>
-            <button   routerLink="/" class="botao">Cancel</button>
+            <button (click)="createMemory()" class="botao">Save</button>
+            <button (click)="cancel()" class="botao">Cancel</button>
         </div>
 
 
